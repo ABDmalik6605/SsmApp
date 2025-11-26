@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/posting_order_picture_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textSize="@dimen/textsize_medium"
+        android:textStyle="bold"
+        android:textColor="@color/boundary_wall_text_bg_color"
+        android:id="@+id/tv_posting_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/posting_order"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/posting_order_picture"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/image_preview_height"
+        android:layout_marginTop="@dimen/x10"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/posting_order_picture_camera_icon"
+        android:background="@drawable/bw_upload_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x15"/>
+</LinearLayout>

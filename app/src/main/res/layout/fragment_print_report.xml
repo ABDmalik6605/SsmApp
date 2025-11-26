@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:id="@+id/tv_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x30"
+        android:text="From"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/x10"/>
+    <TextView
+        android:textSize="@dimen/s15"
+        android:textColor="@color/gray"
+        android:gravity="center_vertical"
+        android:id="@+id/date_from"
+        android:background="@drawable/input_field"
+        android:padding="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x10"
+        android:text="Select From Date"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/x15"
+        android:layout_marginEnd="@dimen/x15"/>
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:id="@+id/tv_cal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x30"
+        android:text="To"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/x10"/>
+    <TextView
+        android:textSize="@dimen/s15"
+        android:textColor="@color/gray"
+        android:gravity="center_vertical"
+        android:id="@+id/date_to"
+        android:background="@drawable/input_field"
+        android:padding="@dimen/x10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x10"
+        android:text="Select To Date"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/x15"
+        android:layout_marginEnd="@dimen/x15"/>
+    <Button
+        android:textColor="@color/white"
+        android:layout_gravity="end"
+        android:id="@+id/btn_print"
+        android:background="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x20"
+        android:text="   PRINT   "/>
+</LinearLayout>

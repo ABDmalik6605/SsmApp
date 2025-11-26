@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/permissionsFragment">
+    <fragment
+        android:label="PermissionsFragment"
+        android:name="com.micromerger.ssms.camerax.fragments.PermissionsFragment"
+        android:id="@+id/permissionsFragment">
+        <action
+            android:id="@+id/action_permissions_to_camera"
+            app:destination="@+id/cameraFragment"
+            app:popUpTo="@+id/permissionsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:label="fragment_camera"
+        android:name="com.micromerger.ssms.camerax.fragments.CameraFragment"
+        android:id="@+id/cameraFragment">
+        <action
+            android:id="@+id/action_camera_to_permissions"
+            app:destination="@+id/permissionsFragment"
+            app:popUpTo="@+id/cameraFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_camera_to_photo"
+            app:destination="@+id/photoFragment"/>
+    </fragment>
+    <fragment
+        android:label="fragment_photo"
+        android:name="com.micromerger.ssms.camerax.fragments.PhotoFragment"
+        android:id="@+id/photoFragment">
+        <argument
+            android:name="file_name"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_photo_to_camera"
+            app:destination="@+id/cameraFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/photoFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

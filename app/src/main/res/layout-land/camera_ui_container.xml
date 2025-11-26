@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/camera_ui_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+    <ImageButton
+        android:id="@+id/camera_capture_button"
+        android:background="@drawable/ic_shutter"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/capture_button_alt"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_alignParentEnd="true"/>
+    <ImageButton
+        android:id="@+id/camera_close_button"
+        android:background="@drawable/ic_close_bg"
+        android:padding="@dimen/_8sdp"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:src="@drawable/ic_close"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/close_camera"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_alignParentStart="true"
+        app:tint="@color/black"/>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+package com.micromerger.ssms.user.beans.maSchoolDetail;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
+import java.util.List;
+import org.apache.commons.lang.builder.ToStringBuilder;
+
+/* loaded from: classes2.dex */
+public class MAsSchoolDetailResponse implements Serializable {
+    private static final long serialVersionUID = -4327172491536167234L;
+
+    @SerializedName("Data")
+    @Expose
+    private List<Data> data = null;
+
+    @SerializedName("Message")
+    @Expose
+    private String message;
+
+    @SerializedName("Status")
+    @Expose
+    private Boolean status;
+
+    public Boolean getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public List<Data> getData() {
+        return this.data;
+    }
+
+    public void setData(List<Data> data) {
+        this.data = data;
+    }
+
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this);
+    }
+}

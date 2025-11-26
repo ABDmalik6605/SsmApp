@@ -1,0 +1,15 @@
+package kotlin.reflect.jvm.internal.impl.load.java.structure;
+
+import java.util.Collection;
+import kotlin.reflect.jvm.internal.impl.name.FqName;
+
+/* compiled from: javaElements.kt */
+/* loaded from: classes2.dex */
+public interface JavaAnnotationOwner extends JavaElement {
+    /* renamed from: findAnnotation */
+    JavaAnnotation mo1343findAnnotation(FqName fqName);
+
+    Collection<JavaAnnotation> getAnnotations();
+
+    boolean isDeprecatedInJavaDoc();
+}

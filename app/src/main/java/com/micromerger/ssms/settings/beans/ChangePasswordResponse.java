@@ -1,0 +1,51 @@
+package com.micromerger.ssms.settings.beans;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
+import org.apache.commons.lang.builder.ToStringBuilder;
+
+/* loaded from: classes2.dex */
+public class ChangePasswordResponse implements Serializable {
+    private static final long serialVersionUID = 1273610092692980731L;
+
+    @SerializedName("Data")
+    @Expose
+    private Object data;
+
+    @SerializedName("Message")
+    @Expose
+    private String message;
+
+    @SerializedName("Status")
+    @Expose
+    private Boolean status;
+
+    public Boolean getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Object getData() {
+        return this.data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this);
+    }
+}

@@ -1,0 +1,31 @@
+package id.zelory.compressor.constraint;
+
+import android.graphics.Bitmap;
+import id.zelory.compressor.UtilKt;
+import java.io.File;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* compiled from: FormatConstraint.kt */
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0010\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0016J\u0010\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\bH\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\n"}, d2 = {"Lid/zelory/compressor/constraint/FormatConstraint;", "Lid/zelory/compressor/constraint/Constraint;", "format", "Landroid/graphics/Bitmap$CompressFormat;", "(Landroid/graphics/Bitmap$CompressFormat;)V", "isSatisfied", "", "imageFile", "Ljava/io/File;", "satisfy", "compressor_release"}, k = 1, mv = {1, 1, 16})
+/* loaded from: classes2.dex */
+public final class FormatConstraint implements Constraint {
+    private final Bitmap.CompressFormat format;
+
+    public FormatConstraint(Bitmap.CompressFormat format) {
+        Intrinsics.checkParameterIsNotNull(format, "format");
+        this.format = format;
+    }
+
+    @Override // id.zelory.compressor.constraint.Constraint
+    public boolean isSatisfied(File imageFile) {
+        Intrinsics.checkParameterIsNotNull(imageFile, "imageFile");
+        return this.format == UtilKt.compressFormat(imageFile);
+    }
+
+    @Override // id.zelory.compressor.constraint.Constraint
+    public File satisfy(File imageFile) {
+        Intrinsics.checkParameterIsNotNull(imageFile, "imageFile");
+        return UtilKt.overWrite$default(imageFile, UtilKt.loadBitmap(imageFile), this.format, 0, 8, null);
+    }
+}
