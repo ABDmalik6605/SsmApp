@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:id="@+id/parentView"
     android:layout_width="match_parent"
@@ -47,7 +48,7 @@
                         android:layout_margin="@dimen/x2"
                         android:checked="false"
                         android:button="@drawable/radiobuttonstate"
-                        android:text="@string/yes"/>
+                        android:text="Yes"/>
                     <RadioButton
                         android:textSize="@dimen/textsize_medium"
                         android:textColor="@color/boundary_wall_text_bg_color"
@@ -58,7 +59,7 @@
                         android:layout_margin="@dimen/x2"
                         android:checked="false"
                         android:button="@drawable/radiobuttonstate"
-                        android:text="@string/no"/>
+                        android:text="No"/>
                 </RadioGroup>
             </RelativeLayout>
             <LinearLayout
@@ -133,7 +134,7 @@
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
-                            android:id="@+id/rb_middle_6_8"
+                            android:id="@+id/rb_elementary_6_8"
                             android:padding="@dimen/x5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -195,7 +196,8 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="06 to 08"/>
+                            android:text="06 to 08"
+                            tools:ignore="DuplicateIds" />
                     </RadioGroup>
                 </LinearLayout>
             </LinearLayout>
@@ -447,7 +449,7 @@
                 android:layout_marginLeft="@dimen/x10"
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginRight="@dimen/x10"
-                android:text="@string/school_status_image_"
+                android:text="School Status Image"
                 android:layout_marginHorizontal="@dimen/x10"/>
             <ImageView
                 android:layout_gravity="center_horizontal"
@@ -476,7 +478,7 @@
                 android:layout_marginLeft="@dimen/x10"
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginRight="@dimen/x10"
-                android:text="@string/school_profile_image_"
+                android:text="School Profile Image"
                 android:layout_marginHorizontal="@dimen/x10"/>
             <ImageView
                 android:layout_gravity="center_horizontal"
@@ -510,7 +512,7 @@
                     android:textColor="@color/boundary_wall_text_bg_color"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/my_location_"
+                    android:text="My Location"
                     android:layout_weight="1"/>
                 <TextView
                     android:id="@+id/tv_count_down_timer"
@@ -530,7 +532,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/x30"
-                android:text="@string/latitude"
+                android:text="Latitude"
                 android:maxLines="1"
                 android:layout_marginStart="@dimen/x10"/>
             <TextView
@@ -552,7 +554,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/x30"
-                android:text="@string/longitude"
+                android:text="Longitude"
                 android:maxLines="1"
                 android:layout_marginStart="@dimen/x10"/>
             <TextView
@@ -593,7 +595,7 @@
                 android:layout_marginTop="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:src="@drawable/location_gif"
-                android:contentDescription="@string/images"
+                android:contentDescription="Images"
                 android:layout_marginVertical="@dimen/_8sdp"/>
             <Button
                 android:textColor="@color/white"
@@ -604,7 +606,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/x20"
-                android:text="@string/start_capturing_location"
+                android:text="Start Capturing Location"
                 android:textAllCaps="false"/>
             <FrameLayout
                 android:id="@+id/save_progress"

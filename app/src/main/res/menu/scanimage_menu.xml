@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/email_image"
-        android:title="@string/email_image"/>
+        android:title="Email Image"/>
     <item
         android:id="@+id/enlarge"
-        android:title="@string/enlarge"/>
+        android:title="enlarge"/>
 </menu>

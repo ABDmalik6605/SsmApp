@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="abc_decor_view_status_guard">#ff000000</color>
-    <color name="abc_decor_view_status_guard_light">#ffffffff</color>
-    <color name="abc_search_url_text_normal">#7fa87f</color>
-    <color name="abc_search_url_text_pressed">@android:color/black</color>
-    <color name="abc_search_url_text_selected">@android:color/black</color>
+
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="ampm_text_color">#8c8c8c</color>

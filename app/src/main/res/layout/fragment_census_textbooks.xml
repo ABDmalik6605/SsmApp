@@ -12,7 +12,7 @@
         android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/layout_header"
-        android:text="@string/textbooks"/>
+        android:text="textbooks"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -41,7 +41,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/ece_katchi"
+                        android:text="ECE/Katchi"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -72,7 +72,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_1"
+                        android:text="Class 1"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -103,7 +103,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_2"
+                        android:text="Class 2"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -134,7 +134,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_3"
+                        android:text="Class 3"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -165,7 +165,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_4"
+                        android:text="Class 4"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -196,7 +196,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_5"
+                        android:text="Class 5"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -227,7 +227,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_6"
+                        android:text="Class 6"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -258,7 +258,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_7"
+                        android:text="Class 7"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -289,7 +289,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_8"
+                        android:text="Class 8"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -320,7 +320,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_9"
+                        android:text="Class 9"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -351,7 +351,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_10"
+                        android:text="Class 10"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -382,7 +382,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_11"
+                        android:text="Class 11"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -413,7 +413,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/class_12"
+                        android:text="Class 12"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView

@@ -260,7 +260,7 @@
                                 android:textColor="@color/gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/class_6"
+                                android:text="class 6"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/x10"/>
                             <ImageView
@@ -291,7 +291,7 @@
                                 android:textColor="@color/gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/class_7"
+                                android:text="class 7"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/x10"/>
                             <ImageView
@@ -323,7 +323,7 @@
                                 android:textColor="@color/gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/class_8"
+                                android:text="class 8"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/x10"/>
                             <ImageView
@@ -355,7 +355,7 @@
                                 android:textColor="@color/gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/class_9"
+                                android:text="class 9"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/x10"/>
                             <ImageView
@@ -387,7 +387,7 @@
                                 android:textColor="@color/gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/class_10"
+                                android:text="class 10"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/x10"/>
                             <ImageView
@@ -419,7 +419,7 @@
                                 android:textColor="@color/gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/class_11"
+                                android:text="class 11"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/x10"/>
                             <ImageView
@@ -451,7 +451,7 @@
                                 android:textColor="@color/gray"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/class_12"
+                                android:text="class 12"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="@dimen/x10"/>
                             <ImageView

@@ -20,7 +20,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/blackboards"
+                android:text="blackboards"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -34,7 +34,7 @@
                     android:id="@+id/tv_blackboards_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                     android:id="@+id/tv_blackboards_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                     android:id="@+id/tv_whiteboards_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -146,7 +146,7 @@
                     android:id="@+id/tv_whiteboards_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -178,7 +178,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/student_chairs"
+                android:text="student chairs"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -192,7 +192,7 @@
                     android:id="@+id/tv_student_chairs_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -226,7 +226,7 @@
                     android:id="@+id/tv_student_chairs_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -258,7 +258,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/student_desks_student_benches"
+                android:text="student desks student benches"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -272,7 +272,7 @@
                     android:id="@+id/tv_student_desks_student_benches_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -306,7 +306,7 @@
                     android:id="@+id/tv_student_desks_student_benches_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -338,7 +338,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/teacher_chairs"
+                android:text="teacher chairs"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -352,7 +352,7 @@
                     android:id="@+id/tv_teacher_chairs_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -386,7 +386,7 @@
                     android:id="@+id/tv_teacher_chairs_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -418,7 +418,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/teacher_tables"
+                android:text="teacher tables"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -432,7 +432,7 @@
                     android:id="@+id/tv_teacher_tables_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -466,7 +466,7 @@
                     android:id="@+id/tv_teacher_tables_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -498,7 +498,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/electric_fans"
+                android:text="electric fans"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -512,7 +512,7 @@
                     android:id="@+id/tv_electric_fans_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -546,7 +546,7 @@
                     android:id="@+id/tv_electric_fans_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -578,7 +578,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/cupboards"
+                android:text="cupboards"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -592,7 +592,7 @@
                     android:id="@+id/tv_cupboards_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -626,7 +626,7 @@
                     android:id="@+id/tv_cupboards_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -658,7 +658,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/charts"
+                android:text="charts"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -672,7 +672,7 @@
                     android:id="@+id/tv_charts_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -706,7 +706,7 @@
                     android:id="@+id/tv_charts_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -738,7 +738,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/computers"
+                android:text="computers"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -752,7 +752,7 @@
                     android:id="@+id/tv_computers_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -786,7 +786,7 @@
                     android:id="@+id/tv_computers_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -818,7 +818,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/electric_motors"
+                android:text="electric_motors"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -832,7 +832,7 @@
                     android:id="@+id/tv_electric_motors_working"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/working"/>
+                    android:text="working"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -866,7 +866,7 @@
                     android:id="@+id/tv_electric_motors_repairable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/repairable"/>
+                    android:text="repairable"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -900,7 +900,7 @@
                     android:id="@+id/tv_computer_lab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/computer_lab"/>
+                    android:text="computer lab"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -923,7 +923,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -934,7 +934,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -961,7 +961,7 @@
                     android:id="@+id/tv_physics_lab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/physics_lab"/>
+                    android:text="physics lab"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -984,7 +984,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -995,7 +995,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1022,7 +1022,7 @@
                     android:id="@+id/tv_chemistry_lab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/chemistry_lab"/>
+                    android:text="chemistry lab"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1045,7 +1045,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1056,7 +1056,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1083,7 +1083,7 @@
                     android:id="@+id/tv_biology_lab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/biology_lab"/>
+                    android:text="biology lab"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1106,7 +1106,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1117,7 +1117,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1144,7 +1144,7 @@
                     android:id="@+id/tv_home_economic_lab"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home_economic_lab"/>
+                    android:text="home economic lab"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1167,7 +1167,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1178,7 +1178,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1204,7 +1204,7 @@
                     android:id="@+id/tv_library"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/library"/>
+                    android:text="library"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1227,7 +1227,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1238,7 +1238,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1264,7 +1264,7 @@
                     android:id="@+id/tv_play_ground"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/play_ground"/>
+                    android:text="play ground"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1287,7 +1287,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1298,7 +1298,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1324,7 +1324,7 @@
                     android:id="@+id/tv_medical_first_aid_box"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/medical_first_aid_box"/>
+                    android:text="medical first aid box"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1347,7 +1347,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1358,7 +1358,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1384,7 +1384,7 @@
                     android:id="@+id/tv_sports_equipment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/sports_equipment"/>
+                    android:text="sports equipment"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1407,7 +1407,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1418,7 +1418,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1444,7 +1444,7 @@
                     android:id="@+id/tv_solar_energy_system"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/solar_energy_system"/>
+                    android:text="solar energy system"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1467,7 +1467,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_and_functional"/>
+                            android:text="available and functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1478,7 +1478,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/available_but_not_functional"/>
+                            android:text="available but not functional"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -1514,7 +1514,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/x2"
-                    android:text="@string/skip"
+                    android:text="skip"
                     android:layout_weight="1"/>
                 <Button
                     android:textColor="@color/white"

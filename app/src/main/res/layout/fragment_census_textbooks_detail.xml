@@ -36,7 +36,7 @@
                     android:id="@+id/tv_textbooks_requested"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_textbooks_requested"/>
+                    android:text="no of textbooks requested"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                     android:id="@+id/tv_textbooks_recieved"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_textbooks_received"/>
+                    android:text="no of textbooks received"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -138,7 +138,7 @@
                     android:id="@+id/tv_textbooks_students"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_students_with_textbooks"/>
+                    android:text="no of students with textbooks"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -172,7 +172,7 @@
                     android:id="@+id/tv_textbooks_surplus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_surplus_textbooks"/>
+                    android:text="no of surplus textbooks"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -206,7 +206,7 @@
                     android:id="@+id/tv_textbooks_shortfalls"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_shortfall_textbooks"/>
+                    android:text="no of shortfall textbooks"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -240,7 +240,7 @@
                     android:id="@+id/tv_timely_distributed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/timely_distributed"/>
+                    android:text="timely distributed"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -290,7 +290,7 @@
                     android:id="@+id/tv_comments"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/comments"/>
+                    android:text="comments"/>
                 <LinearLayout
                     android:background="@drawable/bw_comments_bg"
                     android:layout_width="match_parent"

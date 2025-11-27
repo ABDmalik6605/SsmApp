@@ -12,7 +12,7 @@
         android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/layout_header"
-        android:text="@string/flood_survey"/>
+        android:text="Flood Survey"/>
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     android:id="@+id/tv_furniture_availability"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/after_flood_"/>
+                    android:text="After Flood"/>
                 <RelativeLayout
                     android:id="@+id/after_flood_radio_layout"
                     android:background="@drawable/bw_yes_no_bg"
@@ -58,7 +58,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
-                            android:text="@string/accessible"/>
+                            android:text="Accessible"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -68,7 +68,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
-                            android:text="@string/inundated"/>
+                            android:text="Inundated"/>
                     </RadioGroup>
                 </RelativeLayout>
             </RelativeLayout>
@@ -92,7 +92,7 @@
                         android:textColor="@color/boundary_wall_text_bg_color"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/reason_for_inaccessibility"/>
+                        android:text="Reason for Inaccessibility"/>
                     <LinearLayout
                         android:background="@drawable/bw_dropdown_bg"
                         android:layout_width="match_parent"
@@ -171,7 +171,7 @@
                         android:id="@+id/tv_occupied_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/whether_occupied_by_idps_or_not_"/>
+                        android:text="Whether Occupied by IDPs or Not"/>
                     <RelativeLayout
                         android:id="@+id/occupied_radio_layout"
                         android:background="@drawable/bw_yes_no_bg"
@@ -194,7 +194,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/x2"
                                 android:checked="false"
-                                android:text="@string/yes"/>
+                                android:text="Yes"/>
                             <RadioButton
                                 android:textSize="@dimen/textsize_medium"
                                 android:textColor="@color/boundary_wall_text_bg_color"
@@ -204,7 +204,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/x2"
                                 android:checked="false"
-                                android:text="@string/no"/>
+                                android:text="No"/>
                         </RadioGroup>
                     </RelativeLayout>
                 </RelativeLayout>
@@ -220,7 +220,7 @@
                         android:id="@+id/tv_rain_flood_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/rain_flood_water_in_school_premises_"/>
+                        android:text="Rain/Flood Water in School Premises"/>
                     <RelativeLayout
                         android:id="@+id/rain_flood_radio_layout"
                         android:background="@drawable/bw_yes_no_bg"
@@ -243,7 +243,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/x2"
                                 android:checked="false"
-                                android:text="@string/yes"/>
+                                android:text="Yes"/>
                             <RadioButton
                                 android:textSize="@dimen/textsize_medium"
                                 android:textColor="@color/boundary_wall_text_bg_color"
@@ -253,7 +253,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/x2"
                                 android:checked="false"
-                                android:text="@string/no"/>
+                                android:text="No"/>
                         </RadioGroup>
                     </RelativeLayout>
                 </RelativeLayout>
@@ -269,7 +269,7 @@
                         android:id="@+id/tv_damage_done_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/damage_done_"/>
+                        android:text="Damage Done"/>
                     <RelativeLayout
                         android:id="@+id/damage_done_radio_layout"
                         android:background="@drawable/bw_yes_no_bg"
@@ -292,7 +292,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/x2"
                                 android:checked="false"
-                                android:text="@string/yes"/>
+                                android:text="Yes"/>
                             <RadioButton
                                 android:textSize="@dimen/textsize_medium"
                                 android:textColor="@color/boundary_wall_text_bg_color"
@@ -302,7 +302,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/x2"
                                 android:checked="false"
-                                android:text="@string/no"/>
+                                android:text="No"/>
                         </RadioGroup>
                     </RelativeLayout>
                 </RelativeLayout>
@@ -322,7 +322,7 @@
                         android:padding="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/layout_header"
-                        android:text="@string/damage_done"/>
+                        android:text="Damage Done"/>
                     <RelativeLayout
                         android:id="@+id/school_building_damage_layout"
                         android:layout_width="match_parent"
@@ -335,7 +335,7 @@
                             android:id="@+id/tv_school_building_damage_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/school_building_damage_"/>
+                            android:text="School Building Damage"/>
                         <RelativeLayout
                             android:id="@+id/school_building_damage_radio_layout"
                             android:background="@drawable/bw_yes_no_bg"
@@ -358,7 +358,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/partially"/>
+                                    android:text="Partially"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -368,7 +368,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/fully"/>
+                                    android:text="Fully"/>
                             </RadioGroup>
                         </RelativeLayout>
                     </RelativeLayout>
@@ -384,7 +384,7 @@
                             android:id="@+id/tv_boundary_wall_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/boundary_wall_"/>
+                            android:text="Boundary Wall"/>
                         <RelativeLayout
                             android:id="@+id/boundary_wall_radio_layout"
                             android:background="@drawable/bw_yes_no_bg"
@@ -407,7 +407,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/no"/>
+                                    android:text="No"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -417,7 +417,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/partially"/>
+                                    android:text="Partially"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -427,7 +427,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/fully"/>
+                                    android:text="Fully"/>
                             </RadioGroup>
                         </RelativeLayout>
                     </RelativeLayout>
@@ -443,7 +443,7 @@
                             android:id="@+id/tv_roof_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/roof_"/>
+                            android:text="Roof"/>
                         <RelativeLayout
                             android:id="@+id/roof_radio_layout"
                             android:background="@drawable/bw_yes_no_bg"
@@ -466,7 +466,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/no"/>
+                                    android:text="No"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -476,7 +476,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/partially"/>
+                                    android:text="Partially"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -486,7 +486,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/fully"/>
+                                    android:text="Fully"/>
                             </RadioGroup>
                         </RelativeLayout>
                     </RelativeLayout>
@@ -502,7 +502,7 @@
                             android:id="@+id/tv_walls_of_rooms_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/walls_of_rooms_"/>
+                            android:text="Walls of Rooms"/>
                         <RelativeLayout
                             android:id="@+id/walls_of_rooms_radio_layout"
                             android:background="@drawable/bw_yes_no_bg"
@@ -525,7 +525,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/no"/>
+                                    android:text="No"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -535,7 +535,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/partially"/>
+                                    android:text="Partially"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -545,7 +545,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/fully"/>
+                                    android:text="Fully"/>
                             </RadioGroup>
                         </RelativeLayout>
                     </RelativeLayout>
@@ -561,7 +561,7 @@
                             android:id="@+id/tv_toilet_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/toilet_"/>
+                            android:text="Toilet"/>
                         <RelativeLayout
                             android:id="@+id/toilet_radio_layout"
                             android:background="@drawable/bw_yes_no_bg"
@@ -584,7 +584,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/no"/>
+                                    android:text="No"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -594,7 +594,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/partially"/>
+                                    android:text="Partially"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -604,7 +604,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/fully"/>
+                                    android:text="Fully"/>
                             </RadioGroup>
                         </RelativeLayout>
                     </RelativeLayout>
@@ -620,7 +620,7 @@
                             android:id="@+id/tv_floor_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/floor_"/>
+                            android:text="Floor"/>
                         <RelativeLayout
                             android:id="@+id/floor_radio_layout"
                             android:background="@drawable/bw_yes_no_bg"
@@ -643,7 +643,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/no"/>
+                                    android:text="No"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -653,7 +653,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/partially"/>
+                                    android:text="Partially"/>
                                 <RadioButton
                                     android:textSize="@dimen/textsize_medium"
                                     android:textColor="@color/boundary_wall_text_bg_color"
@@ -663,7 +663,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_margin="@dimen/x2"
                                     android:checked="false"
-                                    android:text="@string/fully"/>
+                                    android:text="Fully"/>
                             </RadioGroup>
                         </RelativeLayout>
                     </RelativeLayout>
@@ -677,7 +677,7 @@
                         android:layout_marginLeft="@dimen/x10"
                         android:layout_marginTop="@dimen/x30"
                         android:layout_marginRight="@dimen/x10"
-                        android:text="@string/overall_observation"
+                        android:text="Overall Observation"
                         android:digits="@string/allowed_characters"/>
                     <LinearLayout
                         android:background="@drawable/bw_comments_bg"
@@ -698,7 +698,7 @@
                             android:scrollbars="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/overall_observation"
+                            android:hint="Overall Observation"
                             android:maxLines="5"
                             android:maxLength="500"
                             android:digits="@string/allowed_characters"
@@ -718,7 +718,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/x8"
-        android:text="@string/save"
+        android:text="Save"
         android:layout_alignParentBottom="true"
         android:backgroundTint="@color/colorPrimaryDark"/>
 </RelativeLayout>

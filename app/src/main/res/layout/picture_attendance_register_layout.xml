@@ -11,7 +11,7 @@
         android:id="@+id/tv_picture_attendance_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/picture_of_attendance_register_current_visit"/>
+        android:text="picture of attendance_register_current_visit"/>
     <ImageView
         android:layout_gravity="center_horizontal"
         android:id="@+id/attendance_register_picture"

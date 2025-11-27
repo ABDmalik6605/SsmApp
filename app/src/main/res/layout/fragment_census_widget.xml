@@ -784,7 +784,7 @@
                     android:id="@+id/tv_toilets_available"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/total_toilets_available"/>
+                    android:text="total toilets available"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -820,7 +820,7 @@
                     android:id="@+id/tv_toilets_functional"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_functional_washroom"/>
+                    android:text="no of functional washroom"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -856,7 +856,7 @@
                     android:id="@+id/tv_toilets_non_functional"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_non_functional_washrooms"/>
+                    android:text="no of non functional washrooms"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -922,7 +922,7 @@
                     android:id="@+id/tv_cleanliness"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/cleanliness"/>
+                    android:text="cleanliness"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -945,7 +945,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/poor"/>
+                            android:text="poor"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -956,7 +956,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/average"/>
+                            android:text="average"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -967,7 +967,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/good"/>
+                            android:text="good"/>
                     </RadioGroup>
                 </RelativeLayout>
             </RelativeLayout>
@@ -984,7 +984,7 @@
                     android:id="@+id/tv_hand_wash_facility_available"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/hand_wash_facility_available"/>
+                    android:text="hand wash facility available"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -1137,7 +1137,7 @@
                     android:id="@+id/tv_source"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/source"/>
+                    android:text="source"/>
                 <RelativeLayout
                     android:orientation="vertical"
                     android:background="@drawable/bw_yes_no_bg"

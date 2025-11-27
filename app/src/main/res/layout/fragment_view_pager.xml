@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
-        android:id="@+id/viewpager"
-        android:background="@null"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-    <com.viewpagerindicator.CirclePageIndicator
-        android:id="@+id/titlePageIndicator"
-        android:visibility="visible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x2"
-        android:layout_marginBottom="@dimen/x6"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:paddingStart="@dimen/x2"
-        android:paddingEnd="@dimen/x2"/>
-</RelativeLayout>
+
+<cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+android:id="@+id/viewpager"
+android:background="@null"
+android:layout_width="match_parent"
+android:layout_height="match_parent"/>
+
+<com.google.android.material.tabs.TabLayout
+android:id="@+id/dots_indicator"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:layout_centerHorizontal="true"
+android:layout_marginBottom="@dimen/x6"
+app:tabBackground="@drawable/tab_pager_dot_selector"
+app:tabGravity="center"
+app:tabIndicatorHeight="0dp" />
+
+    </RelativeLayout>

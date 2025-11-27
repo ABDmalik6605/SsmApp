@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:versionCode="35"
     android:versionName="SSMS (2.91)"
-    android:compileSdkVersion="31"
-    android:compileSdkVersionCodename="12"
-    package="com.micromerger.ssms"
-    platformBuildVersionCode="31"
-    platformBuildVersionName="12">
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="12">
     <uses-sdk
         android:minSdkVersion="21"
-        android:targetSdkVersion="33"/>
+        android:targetSdkVersion="35"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
     <uses-permission
@@ -22,7 +20,7 @@
     <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_GPS"/>
     <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-feature
@@ -48,6 +46,8 @@
         android:hardwareAccelerated="false"
         android:largeHeap="true"
         android:supportsRtl="true"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:replace="android:icon"
         android:usesCleartextTraffic="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:requestLegacyExternalStorage="true">
@@ -163,7 +163,8 @@
         <service
             android:name="androidx.camera.core.impl.MetadataHolderService"
             android:enabled="false"
-            android:exported="false">
+            android:exported="false"
+            tools:ignore="Instantiatable">
             <meta-data
                 android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
                 android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>

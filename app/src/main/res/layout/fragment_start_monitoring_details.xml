@@ -191,7 +191,7 @@
                             android:textColor="@color/gray"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/flood_survey"
+                            android:text="flood survey"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="20dp"
                             android:layout_toEndOf="@+id/floodIcon"/>

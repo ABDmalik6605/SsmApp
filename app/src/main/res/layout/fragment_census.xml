@@ -12,7 +12,7 @@
         android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/layout_header"
-        android:text="@string/census"/>
+        android:text="census"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -40,7 +40,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/school_building"
+                        android:text="school building"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -71,7 +71,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/boundary_wall"
+                        android:text="boundary wall"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -102,7 +102,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/drinking_water"
+                        android:text="drinking water"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -133,7 +133,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/furniture"
+                        android:text="furniture"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -164,7 +164,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/washroom"
+                        android:text="washroom"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -195,7 +195,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/electricity"
+                        android:text="electricity"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -226,7 +226,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sanctioned_new_expenditure"
+                        android:text="sanctioned new expenditure"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -257,7 +257,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/textbooks"
+                        android:text="textbooks"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -288,7 +288,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/classrooms"
+                        android:text="classrooms"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -319,7 +319,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/other_facilities"
+                        android:text="other facilities"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -349,7 +349,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/girls_stipend"
+                        android:text="girls stipend"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView
@@ -380,7 +380,7 @@
                         android:textColor="@color/gray"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/education_quality"
+                        android:text="education quality"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/x10"/>
                     <ImageView

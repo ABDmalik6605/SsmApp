@@ -18,7 +18,7 @@
             android:layout_width="180sp"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_launcher"
-            android:contentDescription="@string/logo_img"/>
+            android:contentDescription="logo img"/>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"

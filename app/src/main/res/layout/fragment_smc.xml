@@ -60,7 +60,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/yes"/>
+                            android:text="Yes"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -71,7 +71,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/no"/>
+                            android:text="No"/>
                     </RadioGroup>
                 </RelativeLayout>
             </RelativeLayout>
@@ -110,7 +110,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/yes"/>
+                            android:text="Yes"/>
                         <RadioButton
                             android:textSize="@dimen/textsize_medium"
                             android:textColor="@color/boundary_wall_text_bg_color"
@@ -121,7 +121,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/no"/>
+                            android:text="No"/>
                     </RadioGroup>
                 </RelativeLayout>
             </RelativeLayout>
@@ -377,7 +377,7 @@
                     android:id="@+id/tv_smc_a_c_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/smc_a_c_number"/>
+                    android:text="SMC A/C Number"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -412,7 +412,7 @@
                     android:id="@+id/tv_smc_a_c_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/smc_a_c_title"/>
+                    android:text="SMC A/C Title"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -447,7 +447,7 @@
                     android:id="@+id/tv_bank_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/bank_name"/>
+                    android:text="Bank Name"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -482,7 +482,7 @@
                     android:id="@+id/tv_name_of_branch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/name_of_branch"/>
+                    android:text="Name of Branch"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -517,7 +517,7 @@
                     android:id="@+id/tv_branch_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/branch_code"/>
+                    android:text="Branch Code"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"

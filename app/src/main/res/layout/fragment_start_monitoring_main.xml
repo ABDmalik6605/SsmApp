@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x50"
             android:layout_margin="@dimen/x10"
-            android:hint="@string/search_schools"
+            android:hint="search schools"
             android:maxLines="1"
             android:maxLength="40"
             android:drawableLeft="@android:drawable/ic_menu_search"

@@ -14,7 +14,7 @@
         android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/girls_stipend"
+        android:text="girls stipend"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
     <ScrollView
@@ -37,7 +37,7 @@
                     android:id="@+id/tv_received_girls_stipend"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/received_girls_stipend"/>
+                    android:text="received girls stipend"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                             android:layout_margin="@dimen/x2"
                             android:checked="false"
                             android:button="@drawable/radiobuttonstate"
-                            android:text="@string/not_applicable"/>
+                            android:text="not applicable"/>
                     </RadioGroup>
                 </RelativeLayout>
             </RelativeLayout>
@@ -98,7 +98,7 @@
                     android:id="@+id/tv_total_number_of_enrollment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/total_number_of_enrollment"/>
+                    android:text="total number of enrollment"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -133,7 +133,7 @@
                     android:id="@+id/tv_total_number_of_eligible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/total_number_of_eligible"/>
+                    android:text="total number of eligible"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -168,7 +168,7 @@
                     android:id="@+id/tv_total_number_of_received_candidates"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/total_number_of_received_candidates"/>
+                    android:text="total number of received candidates"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"

@@ -125,7 +125,7 @@
                     android:id="@+id/tv_school_is_placed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/school_is_placed"/>
+                    android:text="school is placed"/>
                 <LinearLayout
                     android:gravity="center"
                     android:background="@drawable/bw_dropdown_bg"
@@ -152,7 +152,7 @@
                     android:id="@+id/tv_type_of_building"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/type_of_building"/>
+                    android:text="type of building"/>
                 <LinearLayout
                     android:gravity="center"
                     android:background="@drawable/bw_dropdown_bg"
@@ -206,7 +206,7 @@
                     android:id="@+id/tv_rooms_affected"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_rooms_affected_"/>
+                    android:text="no of rooms affected_"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -240,7 +240,7 @@
                     android:id="@+id/tv_is_this_school_adopted"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/is_this_school_adopted"/>
+                    android:text="is this school adopted"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -290,7 +290,7 @@
                     android:id="@+id/tv_name_of_adopter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/name_of_adopter"/>
+                    android:text="name of adopter"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -364,7 +364,7 @@
                         android:id="@+id/tv_buidling_under_illegal_occupation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/is_the_building_under_any_illegal_occupation"/>
+                        android:text="is the building under any illegal occupation"/>
                     <RelativeLayout
                         android:id="@+id/rv_radio_group"
                         android:background="@drawable/bw_yes_no_bg"
@@ -415,7 +415,7 @@
                         android:id="@+id/tv_remarks"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/remarks"/>
+                        android:text="remarks"/>
                     <LinearLayout
                         android:gravity="center"
                         android:background="@drawable/bw_dropdown_bg"

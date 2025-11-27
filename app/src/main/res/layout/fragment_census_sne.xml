@@ -14,7 +14,7 @@
         android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sanctioned_new_expenditure"
+        android:text="sanctioned new expenditure"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
     <ScrollView
@@ -37,7 +37,7 @@
                     android:id="@+id/tv_school_has_approved_sne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/school_has_approved_sne"/>
+                    android:text="school has approved sne"/>
                 <RelativeLayout
                     android:background="@drawable/bw_yes_no_bg"
                     android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                     android:padding="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/teaching"
+                    android:text="teaching"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"/>
                 <RelativeLayout
@@ -105,7 +105,7 @@
                         android:id="@+id/tv_sanctioned"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sanctioned"/>
+                        android:text="sanctioned"/>
                     <LinearLayout
                         android:background="@drawable/bw_dropdown_bg"
                         android:layout_width="match_parent"
@@ -140,7 +140,7 @@
                         android:id="@+id/tv_filled"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/filled"/>
+                        android:text="filled"/>
                     <LinearLayout
                         android:background="@drawable/bw_dropdown_bg"
                         android:layout_width="match_parent"
@@ -175,7 +175,7 @@
                         android:id="@+id/tv_vacant"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/vacant"/>
+                        android:text="vacant"/>
                     <LinearLayout
                         android:background="@drawable/bw_dropdown_bg"
                         android:layout_width="match_parent"
@@ -207,7 +207,7 @@
                     android:padding="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/non_teaching"
+                    android:text="non teaching"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"/>
                 <RelativeLayout
@@ -222,7 +222,7 @@
                         android:id="@+id/tv_non_teaching_sanctioned"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sanctioned"/>
+                        android:text="sanctioned"/>
                     <LinearLayout
                         android:background="@drawable/bw_dropdown_bg"
                         android:layout_width="match_parent"
@@ -257,7 +257,7 @@
                         android:id="@+id/tv_non_teaching_filled"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/filled"/>
+                        android:text="filled"/>
                     <LinearLayout
                         android:background="@drawable/bw_dropdown_bg"
                         android:layout_width="match_parent"
@@ -292,7 +292,7 @@
                         android:id="@+id/tv_non_teaching_vacant"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/vacant"/>
+                        android:text="vacant"/>
                     <LinearLayout
                         android:background="@drawable/bw_dropdown_bg"
                         android:layout_width="match_parent"

@@ -89,16 +89,17 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     abstract void writeToReverse(ByteOutput byteOutput) throws IOException;
 
     static {
+        // Depends on Android.isOnAndroidDevice()
         byteArrayCopier = Android.isOnAndroidDevice() ? new SystemByteArrayCopier() : new ArraysByteArrayCopier();
         UNSIGNED_LEXICOGRAPHICAL_COMPARATOR = new Comparator<ByteString>() { // from class: com.google.crypto.tink.shaded.protobuf.ByteString.2
-            /* JADX WARN: Type inference failed for: r0v0, types: [com.google.crypto.tink.shaded.protobuf.ByteString$ByteIterator] */
-            /* JADX WARN: Type inference failed for: r1v0, types: [com.google.crypto.tink.shaded.protobuf.ByteString$ByteIterator] */
             @Override // java.util.Comparator
             public int compare(ByteString byteString, ByteString byteString2) {
-                ?? Iterator2 = byteString.iterator2();
-                ?? Iterator22 = byteString2.iterator2();
-                while (Iterator2.hasNext() && Iterator22.hasNext()) {
-                    int iCompare = Integer.compare(ByteString.toInt(Iterator2.nextByte()), ByteString.toInt(Iterator22.nextByte()));
+                // Fixed: Cast iterator to ByteIterator and use the correct iterator() method name
+                ByteIterator iterator1 = (ByteIterator) byteString.iterator();
+                ByteIterator iterator2 = (ByteIterator) byteString2.iterator();
+
+                while (iterator1.hasNext() && iterator2.hasNext()) {
+                    int iCompare = Integer.compare(ByteString.toInt(iterator1.nextByte()), ByteString.toInt(iterator2.nextByte()));
                     if (iCompare != 0) {
                         return iCompare;
                     }
@@ -133,9 +134,9 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     ByteString() {
     }
 
+    // Fixed: Renamed from iterator2() to iterator() to satisfy the Iterable<Byte> interface.
     @Override // java.lang.Iterable
-    /* renamed from: iterator, reason: merged with bridge method [inline-methods] */
-    public Iterator<Byte> iterator2() {
+    public Iterator<Byte> iterator() {
         return new AbstractByteIterator() { // from class: com.google.crypto.tink.shaded.protobuf.ByteString.1
             private final int limit;
             private int position = 0;
@@ -210,6 +211,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
         if (byteBuffer.hasArray()) {
             return wrap(byteBuffer.array(), byteBuffer.arrayOffset() + byteBuffer.position(), byteBuffer.remaining());
         }
+        // Depends on NioByteString
         return new NioByteString(byteBuffer);
     }
 
@@ -285,6 +287,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
         if (Integer.MAX_VALUE - size() < byteString.size()) {
             throw new IllegalArgumentException("ByteString would be too long: " + size() + "+" + byteString.size());
         }
+        // Depends on RopeByteString
         return RopeByteString.concatenate(this, byteString);
     }
 
@@ -523,7 +526,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
 
     static final class CodedBuilder {
         private final byte[] buffer;
-        private final CodedOutputStream output;
+        private final CodedOutputStream output; // Depends on CodedOutputStream
 
         private CodedBuilder(int i) {
             byte[] bArr = new byte[i];
@@ -569,6 +572,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
     }
 
     public final String toString() {
+        // Depends on TextFormatEscaper
         return String.format(Locale.ROOT, "<ByteString@%s size=%d contents=\"%s\">", Integer.toHexString(System.identityHashCode(this)), Integer.valueOf(size()), truncateAndEscapeForDisplay());
     }
 
@@ -659,13 +663,13 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
         @Override // com.google.crypto.tink.shaded.protobuf.ByteString
         public final boolean isValidUtf8() {
             int offsetIntoBytes = getOffsetIntoBytes();
-            return Utf8.isValidUtf8(this.bytes, offsetIntoBytes, size() + offsetIntoBytes);
+            return Utf8.isValidUtf8(this.bytes, offsetIntoBytes, size() + offsetIntoBytes); // Depends on Utf8
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.ByteString
         protected final int partialIsValidUtf8(int i, int i2, int i3) {
             int offsetIntoBytes = getOffsetIntoBytes() + i2;
-            return Utf8.partialIsValidUtf8(i, this.bytes, offsetIntoBytes, i3 + offsetIntoBytes);
+            return Utf8.partialIsValidUtf8(i, this.bytes, offsetIntoBytes, i3 + offsetIntoBytes); // Depends on Utf8
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.ByteString
@@ -721,7 +725,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
 
         @Override // com.google.crypto.tink.shaded.protobuf.ByteString
         protected final int partialHash(int i, int i2, int i3) {
-            return Internal.partialHash(i, this.bytes, getOffsetIntoBytes() + i2, i3);
+            return Internal.partialHash(i, this.bytes, getOffsetIntoBytes() + i2, i3); // Depends on Internal
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.ByteString
@@ -731,7 +735,7 @@ public abstract class ByteString implements Iterable<Byte>, Serializable {
 
         @Override // com.google.crypto.tink.shaded.protobuf.ByteString
         public final CodedInputStream newCodedInput() {
-            return CodedInputStream.newInstance(this.bytes, getOffsetIntoBytes(), size(), true);
+            return CodedInputStream.newInstance(this.bytes, getOffsetIntoBytes(), size(), true); // Depends on CodedInputStream
         }
     }
 

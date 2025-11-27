@@ -1,10 +1,13 @@
 buildscript {
+    ext.kotlin_version = '1.9.22'
     repositories {
         google()
         mavenCentral()
+        // JitPack is not needed here if it's not a buildscript dependency, but it doesn't hurt.
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.9.0'
+        classpath 'com.android.tools.build:gradle:8.9.3'
     }
 }
 
@@ -12,6 +15,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' } // <-- THIS IS THE CRITICAL ADDITION
     }
 }
 

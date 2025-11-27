@@ -14,7 +14,7 @@
         android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/classrooms"
+        android:text="classrooms"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
     <ScrollView
@@ -36,7 +36,7 @@
                     android:id="@+id/tv_total_no_of_classrooms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/total_no_of_classrooms"/>
+                    android:text="total no of classrooms"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                     android:id="@+id/tv_no_of_classrooms_used_for_teaching"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/no_of_classrooms_used_for_teaching"/>
+                    android:text="no of classrooms used for teaching"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -136,7 +136,7 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/write_the_total_no_of_rooms_utilized_for_other_than_learning_teaching_purpose"
+                android:text="write the total no of rooms utilized for other than learning teaching purpose"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"/>
             <RelativeLayout
@@ -150,7 +150,7 @@
                     android:id="@+id/tv_ngo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ngo"/>
+                    android:text="ngo"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -184,7 +184,7 @@
                     android:id="@+id/tv_district_administration_offices"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/district_administration_offices"/>
+                    android:text="district administration offices"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -218,7 +218,7 @@
                     android:id="@+id/tv_occupied_by_villager"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/occupied_by_villager"/>
+                    android:text="occupied by villager"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -252,7 +252,7 @@
                     android:id="@+id/tv_community_centre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/community_centre"/>
+                    android:text="community centre"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -286,7 +286,7 @@
                     android:id="@+id/tv_vocational_training_centre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vocational_training_centre"/>
+                    android:text="vocational training centre"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -320,7 +320,7 @@
                     android:id="@+id/tv_other_specify"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/other_specify"/>
+                    android:text="other specify"/>
                 <LinearLayout
                     android:background="@drawable/bw_dropdown_bg"
                     android:layout_width="match_parent"
@@ -378,7 +378,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/x2"
-                    android:text="@string/skip"
+                    android:text="skip"
                     android:layout_weight="1"/>
                 <Button
                     android:textColor="@color/white"

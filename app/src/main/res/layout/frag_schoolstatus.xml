@@ -447,7 +447,7 @@
                 android:layout_marginLeft="@dimen/x10"
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginRight="@dimen/x10"
-                android:text="@string/school_status_image_"/>
+                android:text="school status image"/>
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/previewImage"
@@ -475,7 +475,7 @@
                 android:layout_marginLeft="@dimen/x10"
                 android:layout_marginTop="@dimen/x30"
                 android:layout_marginRight="@dimen/x10"
-                android:text="@string/school_profile_image_"/>
+                android:text="profile image"/>
             <ImageView
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/school_status_image"
@@ -507,7 +507,7 @@
                     android:textColor="@color/boundary_wall_text_bg_color"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/my_location_"
+                    android:text="my location"
                     android:layout_weight="1"/>
                 <TextView
                     android:id="@+id/tv_count_down_timer"
@@ -527,7 +527,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/x30"
-                android:text="@string/latitude"
+                android:text="latitude"
                 android:maxLines="1"
                 android:layout_marginStart="@dimen/x10"/>
             <TextView
@@ -549,7 +549,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/x30"
-                android:text="@string/longitude"
+                android:text="longitude"
                 android:maxLines="1"
                 android:layout_marginStart="@dimen/x10"/>
             <TextView
@@ -599,7 +599,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/x20"
-                android:text="@string/start_capturing_location"
+                android:text="start captring location"
                 android:textAllCaps="false"/>
             <FrameLayout
                 android:id="@+id/save_progress"

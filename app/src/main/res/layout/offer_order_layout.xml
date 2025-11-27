@@ -11,7 +11,7 @@
         android:id="@+id/tv_offer_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/offer_order"/>
+        android:text="offer order"/>
     <ImageView
         android:layout_gravity="center_horizontal"
         android:id="@+id/offer_order_picture"

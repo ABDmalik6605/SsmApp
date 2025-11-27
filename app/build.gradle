@@ -4,13 +4,13 @@ plugins {
 
 android {
 	namespace "com.micromerger.ssms"
-    compileSdkVersion 33
+    compileSdkVersion 35
 
     defaultConfig {
         applicationId 'com.micromerger.ssms'
         minSdkVersion 21
         //noinspection ExpiringTargetSdkVersion,ExpiredTargetSdkVersion
-        targetSdkVersion 33
+        targetSdkVersion 35
         versionCode 35
         versionName "SSMS (2.91)"
 
@@ -40,4 +40,26 @@ android {
 
 dependencies {
     // TODO: dependencies
+    implementation 'androidx.appcompat:appcompat:1.7.1' // latest stable
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'cn.pedant.sweetalert:library:1.3'
+    implementation 'com.google.android.gms:play-services-auth:21.4.0'
+    // Navigation Component
+    def nav_version = "2.7.2" // use latest stable
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+        // You may need both of these, try the first one first.
+        implementation 'org.checkerframework:checker-qual:3.52.0'
+    implementation 'com.android.support:support-media-compat:28.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:3.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.3.2'
+    implementation 'com.squareup.okio:okio:3.16.4'
+    //noinspection GradleDependency
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.ext.kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2'
+    //noinspection Aligned16KB
+    implementation 'net.zetetic:android-database-sqlcipher:4.5.4'
+//    implementation 'com.github.janishar:ParaCamera:1.0.1' // Check the exact format required by the repo owner
+    // or a more recent version
 }

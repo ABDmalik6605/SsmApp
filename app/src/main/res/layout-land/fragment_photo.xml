@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:contentDescription="@string/photo"/>
+        android:contentDescription="photo"/>
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/linear_layout"
@@ -23,7 +23,7 @@
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_60sdp"
             android:scaleType="fitCenter"
-            android:contentDescription="@string/retry"
+            android:contentDescription="retry"
             app:srcCompat="@drawable/ic_done"/>
         <View
             android:layout_width="0dp"
@@ -36,7 +36,7 @@
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_60sdp"
             android:scaleType="fitCenter"
-            android:contentDescription="@string/retry"
+            android:contentDescription="retry"
             app:srcCompat="@drawable/ic_retake"/>
     </LinearLayout>
 </RelativeLayout>

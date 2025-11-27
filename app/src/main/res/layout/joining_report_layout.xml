@@ -11,7 +11,7 @@
         android:id="@+id/tv_joining_report"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/joining_report"/>
+        android:text="joining report"/>
     <ImageView
         android:layout_gravity="center_horizontal"
         android:id="@+id/joining_report_picture"

@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
-            android:text="@string/user_details_name_text"
+            android:text="user details name_text"
             android:layout_weight="1"/>
         <TextView
             android:textSize="@dimen/textsize_medium"
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
-            android:text="@string/user_details_description_text"
+            android:text="user details_description_text"
             android:layout_weight="1"/>
         <TextView
             android:textSize="@dimen/textsize_medium"
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
-            android:text="@string/user_details_create_date_text"
+            android:text="user details create_date_text"
             android:layout_weight="1"/>
         <TextView
             android:textSize="@dimen/textsize_medium"
@@ -98,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
-            android:text="@string/user_details_modify_date_text"
+            android:text="user details modify_date_text"
             android:layout_weight="1"/>
         <TextView
             android:textSize="@dimen/textsize_medium"
@@ -124,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
-            android:text="@string/user_details_match_score_text"
+            android:text="user details match score text"
             android:layout_weight="1"/>
         <TextView
             android:textSize="@dimen/textsize_medium"
