@@ -1,7 +1,11 @@
 plugins {
     id 'com.android.application'
+    id 'kotlin-android' // Good practice to explicit add this
+    id 'com.google.gms.google-services' // <--- ADD THIS
+    id 'com.google.firebase.crashlytics' // <--- ADD THIS
 }
 
+// ... rest of your android { } block ...
 android {
 	namespace "com.micromerger.ssms"
     compileSdkVersion 35
@@ -126,4 +130,10 @@ dependencies {
 
     // Replacements for com/google/zxing (Barcode scanning, often present)
     implementation 'com.google.zxing:core:3.5.2'
+
+    // NEW: Use the JitPack version of Android Networking
+    implementation 'com.github.amitshekhar.android:android-networking:1.0.2'
+
+    // NEW: Use the JitPack version of SweetAlert (F0ris fork)
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
 }

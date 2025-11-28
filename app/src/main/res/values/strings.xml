@@ -69,5 +69,53 @@
     <string name="class_3">class 3</string>
     <string name="class_4">class 4</string>
     <string name="class_5">class 5</string>
+    <string name="school_dropdown_title">%1$s - %2$s (%3$s)</string>
+    <string name="select_school">Select School</string>
+
+    <string name="person_id">Person ID</string>
+    <string name="person_id_">Person ID *</string>
+    <string name="designation_">Designation *</string>
+    <string name="order_effecting_date">Order Effecting Date</string>
+    <string name="order_effecting_date_">Order Effecting Date *</string>
+
+    <string name="transfer_order">Transfer Order</string>
+    <string name="transfer_order_">Transfer Order *</string>
+
+    <string name="promotion_order">Promotion Order</string>
+    <string name="promotion_order_">Promotion Order *</string>
+
+    <string name="authority_order">Authority Order</string>
+    <string name="authority_order_">Authority Order *</string>
+
+    <string name="obituary_order_death_certificate">Obituary Order / Death Certificate</string>
+    <string name="obituary_order_death_certificate_">Obituary Order / Death Certificate *</string>
+
+    <string name="retirement_order">Retirement Order</string>
+    <string name="retirement_order_">Retirement Order *</string>
+
+    <string name="offer_order">Offer Order</string>
+    <string name="offer_order_">Offer Order *</string>
+
+
+    <string name="employee_payslip_">Employee Payslip *</string>
+
+    <string name="joining_report">Joining Report</string>
+    <string name="joining_report_">Joining Report *</string>
+
+    <string name="picture_of_attendance_register_current_visit">Attendance Register (Current Visit)</string>
+    <string name="picture_of_attendance_register_current_visit_">Attendance Register (Current Visit) *</string>
+
+    <string name="information_letter_expired">Information Letter (Expired)</string>
+    <string name="information_letter_retired">Information Letter (Retired)</string>
+
+    <string name="letter_order_no">Letter Order No</string>
+    <string name="letter_order_no_">Letter Order No *</string>
+
+    <string name="letter_order_date">Letter Order Date</string>
+    <string name="letter_order_date_">Letter Order Date *</string>
+
+    <string name="no_response_from_administration">No response from administration</string>
+    <string name="closed">Closed</string>
+    <string name="open">Open</string>
     ...
 </resources>

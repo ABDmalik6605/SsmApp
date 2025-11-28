@@ -6,22 +6,17 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        // Ensure this version matches your Android Studio version
         classpath 'com.android.tools.build:gradle:8.2.2'
-        // Note: I lowered this to 8.2.2 because 8.9.3 does not exist yet (it might be a typo).
-        // If 8.9.3 works for you, change it back.
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // Firebase & Google Services Plugins
+        classpath 'com.google.gms:google-services:4.4.1'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-        jcenter() // <--- This enables the "Old Store" for ancient libraries
-    }
-}
+// --- DELETE THE "allprojects" BLOCK ---
+// It is now handled in settings.gradle
 
 task clean(type: Delete) {
     delete rootProject.buildDir

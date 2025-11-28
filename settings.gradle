@@ -1,3 +1,21 @@
-rootProject.name = 'SSMS'
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
 
-include 'app'
+dependencyResolutionManagement {
+    // This line tells Gradle: "Ignore repositories in build.gradle, use these instead."
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://jcenter.bintray.com' } // Needed for old libraries
+    }
+}
+
+rootProject.name = "Ssm-v3"
+include ':app'

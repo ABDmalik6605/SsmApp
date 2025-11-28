@@ -1,7 +1,9 @@
 package com.micromerger.ssms.startmonitoring.fragments;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -17,6 +19,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -55,31 +58,58 @@ public abstract class BaseFragment extends Fragment {
     int CAMERA_CROP = 2;
     private Bitmap bitmap = null;
     private String bitmapPath = "";
-    private final ActivityResultLauncher<Intent> getImagePath = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() { // from class: com.micromerger.ssms.startmonitoring.fragments.BaseFragment.1
-        @Override // androidx.activity.result.ActivityResultCallback
-        public void onActivityResult(ActivityResult result) {
-            if (result.getResultCode() == -1) {
-                if (result.getData() != null) {
-                    String stringExtra = result.getData().getStringExtra(CameraActivity.IMAGE_PATH);
-                    if (stringExtra != null) {
-                        BaseFragment.this.cameraActivityCallBack.onCameraActivityResult(BitmapFactory.decodeFile(stringExtra), stringExtra);
-                        return;
-                    } else {
+
+    // FIXED: Converted broken lambda to standard ActivityResultCallback
+    private final ActivityResultLauncher<Intent> getImagePath = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == -1) {
+                        if (result.getData() != null) {
+                            String stringExtra = result.getData().getStringExtra(CameraActivity.IMAGE_PATH);
+                            if (stringExtra != null) {
+                                if (BaseFragment.this.cameraActivityCallBack != null) {
+                                    BaseFragment.this.cameraActivityCallBack.onCameraActivityResult(BitmapFactory.decodeFile(stringExtra), stringExtra);
+                                }
+                                return;
+                            } else {
+                                CommonActions.snackMsgs(BaseFragment.this.parentView, "Error, please try again later!");
+                                return;
+                            }
+                        }
                         CommonActions.snackMsgs(BaseFragment.this.parentView, "Error, please try again later!");
-                        return;
                     }
                 }
-                CommonActions.snackMsgs(BaseFragment.this.parentView, "Error, please try again later!");
             }
-        }
-    });
+    );
+
     int requestCode = 0;
-    private final ActivityResultLauncher<Intent> getMultipleImagesPath = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback() { // from class: com.micromerger.ssms.startmonitoring.fragments.-$$Lambda$BaseFragment$KtkMwVX7hoZ0We3M31DqN5wgYBE
-        @Override // androidx.activity.result.ActivityResultCallback
-        public final void onActivityResult(Object obj) {
-            this.f$0.lambda$new$0$BaseFragment((ActivityResult) obj);
-        }
-    });
+
+    // FIXED: Converted broken lambda to standard ActivityResultCallback
+    private final ActivityResultLauncher<Intent> getMultipleImagesPath = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == -1) {
+                        if (result.getData() != null) {
+                            String stringExtra = result.getData().getStringExtra(CameraActivity.IMAGE_PATH);
+                            if (stringExtra != null) {
+                                if (BaseFragment.this.cameraActivityCallBackMultiImages != null) {
+                                    BaseFragment.this.cameraActivityCallBackMultiImages.onCameraActivityResult(BitmapFactory.decodeFile(stringExtra), stringExtra, BaseFragment.this.requestCode);
+                                }
+                                return;
+                            } else {
+                                CommonActions.snackMsgs(BaseFragment.this.parentView, "Error, please try again later!");
+                                return;
+                            }
+                        }
+                        CommonActions.snackMsgs(BaseFragment.this.parentView, "Error, please try again later!");
+                    }
+                }
+            }
+    );
 
     public interface CameraActivityCallBack {
         void onCameraActivityResult(Bitmap bitmap, String bitmapPath);
@@ -93,22 +123,7 @@ public abstract class BaseFragment extends Fragment {
 
     @Override // androidx.fragment.app.Fragment
     public void onSaveInstanceState(Bundle outState) {
-    }
-
-    public /* synthetic */ void lambda$new$0$BaseFragment(ActivityResult activityResult) {
-        if (activityResult.getResultCode() == -1) {
-            if (activityResult.getData() != null) {
-                String stringExtra = activityResult.getData().getStringExtra(CameraActivity.IMAGE_PATH);
-                if (stringExtra != null) {
-                    this.cameraActivityCallBackMultiImages.onCameraActivityResult(BitmapFactory.decodeFile(stringExtra), stringExtra, this.requestCode);
-                    return;
-                } else {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-        }
+        super.onSaveInstanceState(outState);
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -121,19 +136,23 @@ public abstract class BaseFragment extends Fragment {
         this.fm = supportFragmentManager;
         this.ft = supportFragmentManager.beginTransaction();
         this.marshMallowPermission = new MarshmallowPermissions(getActivity());
+
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("android.permission.CAMERA");
-        arrayList.add("android.permission.WRITE_EXTERNAL_STORAGE");
-        arrayList.add("android.permission.READ_EXTERNAL_STORAGE");
+        // Write permission is generally not needed on newer Android versions for app-specific storage, but keeping logic intact
+        if (Build.VERSION.SDK_INT < 29) {
+            arrayList.add("android.permission.WRITE_EXTERNAL_STORAGE");
+            arrayList.add("android.permission.READ_EXTERNAL_STORAGE");
+        }
         arrayList.add("android.permission.ACCESS_FINE_LOCATION");
         arrayList.add("android.permission.ACCESS_COARSE_LOCATION");
+
         ArrayList<String> arrayListFindUnAskedPermissions = findUnAskedPermissions(arrayList);
         this.permissionsToRequest = arrayListFindUnAskedPermissions;
-        if (arrayListFindUnAskedPermissions.size() <= 0 || Build.VERSION.SDK_INT < 23) {
-            return;
+
+        if (arrayListFindUnAskedPermissions.size() > 0 && Build.VERSION.SDK_INT >= 23) {
+            requestPermissions(this.permissionsToRequest.toArray(new String[0]), 0);
         }
-        ArrayList<String> arrayList2 = this.permissionsToRequest;
-        requestPermissions((String[]) arrayList2.toArray(new String[arrayList2.size()]), 0);
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -144,7 +163,9 @@ public abstract class BaseFragment extends Fragment {
     @Override // androidx.fragment.app.Fragment
     public void onPause() {
         super.onPause();
-        CommonActions.hideSoftKeyboard(getActivityContext(), getActivity().getCurrentFocus());
+        if (getActivity() != null && getActivity().getCurrentFocus() != null) {
+            CommonActions.hideSoftKeyboard(getActivityContext(), getActivity().getCurrentFocus());
+        }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
@@ -156,16 +177,12 @@ public abstract class BaseFragment extends Fragment {
     public void loadingStarted() {
         if (getMainActivity() != null) {
             getMainActivity().onLoadingStarted();
-        } else if (getMainActivity() != null) {
-            getMainActivity().onLoadingStarted();
         }
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void loadingFinished() {
         if (getMainActivity() != null) {
-            getMainActivity().onLoadingFinished();
-        } else if (getMainActivity() != null) {
             getMainActivity().onLoadingFinished();
         }
     }
@@ -175,14 +192,16 @@ public abstract class BaseFragment extends Fragment {
         return (MainActivity) getActivity();
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     protected void setCameraActivityCallBack(Fragment fragment) {
-        this.cameraActivityCallBack = (CameraActivityCallBack) fragment;
+        if (fragment instanceof CameraActivityCallBack) {
+            this.cameraActivityCallBack = (CameraActivityCallBack) fragment;
+        }
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
     protected void setCameraActivityCallBackMultiImages(Fragment fragment) {
-        this.cameraActivityCallBackMultiImages = (CameraActivityCallBackMultiImages) fragment;
+        if (fragment instanceof CameraActivityCallBackMultiImages) {
+            this.cameraActivityCallBackMultiImages = (CameraActivityCallBackMultiImages) fragment;
+        }
     }
 
     public void getPhotoFromCamera(int requestCode, String fileName) {
@@ -220,283 +239,54 @@ public abstract class BaseFragment extends Fragment {
 
     @Override // androidx.fragment.app.Fragment
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        String strSaveFile;
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 12) {
+
+        // Handles old camera implementation logic (12-22)
+        if (requestCode >= 12 && requestCode <= 22) {
             if (resultCode == -1) {
                 try {
-                    String strSaveFile2 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera = this.camera;
-                    if (camera != null) {
-                        Bitmap bitmapAddWaterMark = PictureUtils.addWaterMark(camera.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile2 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark, strSaveFile2, 12);
+                    if (this.camera != null && this.camera.getCameraBitmap() != null) {
+                        String strSaveFile = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
+                        Bitmap bitmapAddWaterMark = PictureUtils.addWaterMark(this.camera.getCameraBitmap());
+
+                        if (this.cameraActivityCallBackMultiImages != null && strSaveFile != null) {
+                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark, strSaveFile, requestCode);
                         } else {
                             CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
                         }
                     } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
+                        Toast.makeText(this.mContext, "Error: Camera data empty", Toast.LENGTH_SHORT).show();
                     }
-                    return;
-                } catch (Exception unused) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
+                } catch (Throwable unused) {
+                    CommonActions.snackMsgs(this.parentView, "Error saving image!");
                 }
             }
             return;
         }
-        if (requestCode == 13) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile3 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera2 = this.camera;
-                    if (camera2 != null) {
-                        Bitmap bitmapAddWaterMark2 = PictureUtils.addWaterMark(camera2.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile3 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark2, strSaveFile3, 13);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused2) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 14) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile4 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera3 = this.camera;
-                    if (camera3 != null) {
-                        Bitmap bitmapAddWaterMark3 = PictureUtils.addWaterMark(camera3.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile4 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark3, strSaveFile4, 14);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused3) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 15) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile5 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera4 = this.camera;
-                    if (camera4 != null) {
-                        Bitmap bitmapAddWaterMark4 = PictureUtils.addWaterMark(camera4.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile5 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark4, strSaveFile5, 15);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused4) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 16) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile6 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera5 = this.camera;
-                    if (camera5 != null) {
-                        Bitmap bitmapAddWaterMark5 = PictureUtils.addWaterMark(camera5.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile6 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark5, strSaveFile6, 16);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused5) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 17) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile7 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera6 = this.camera;
-                    if (camera6 != null) {
-                        Bitmap bitmapAddWaterMark6 = PictureUtils.addWaterMark(camera6.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile7 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark6, strSaveFile7, 17);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused6) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 18) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile8 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera7 = this.camera;
-                    if (camera7 != null) {
-                        Bitmap bitmapAddWaterMark7 = PictureUtils.addWaterMark(camera7.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile8 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark7, strSaveFile8, 18);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused7) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 20) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile9 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera8 = this.camera;
-                    if (camera8 != null) {
-                        Bitmap bitmapAddWaterMark8 = PictureUtils.addWaterMark(camera8.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile9 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark8, strSaveFile9, 20);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused8) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 19) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile10 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera9 = this.camera;
-                    if (camera9 != null) {
-                        Bitmap bitmapAddWaterMark9 = PictureUtils.addWaterMark(camera9.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile10 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark9, strSaveFile10, 19);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused9) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 21) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile11 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera10 = this.camera;
-                    if (camera10 != null) {
-                        Bitmap bitmapAddWaterMark10 = PictureUtils.addWaterMark(camera10.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile11 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark10, strSaveFile11, 21);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused10) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
-        if (requestCode == 22) {
-            if (resultCode == -1) {
-                try {
-                    String strSaveFile12 = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-                    Camera camera11 = this.camera;
-                    if (camera11 != null) {
-                        Bitmap bitmapAddWaterMark11 = PictureUtils.addWaterMark(camera11.getCameraBitmap());
-                        if (this.bitmapPath != null && strSaveFile12 != null) {
-                            this.cameraActivityCallBackMultiImages.onCameraActivityResult(bitmapAddWaterMark11, strSaveFile12, 22);
-                        } else {
-                            CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                        }
-                    } else {
-                        Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
-                    }
-                    return;
-                } catch (Exception unused11) {
-                    CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
-                    return;
-                }
-            }
-            return;
-        }
+
         if (requestCode == 1 && resultCode == -1) {
+            String strSaveFile;
             try {
                 strSaveFile = PictureUtils.saveFile(PictureUtils.addWaterMark(this.camera.getCameraBitmap()), "image_" + System.currentTimeMillis());
-            } catch (Exception unused12) {
+            } catch (Throwable unused12) {
                 strSaveFile = null;
             }
             if (this.camera != null && strSaveFile != null) {
                 this.bitmapPath = strSaveFile;
             } else {
                 Log.e("CAMERA", "onActivityResult: camera not initialized or path is null");
-                Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", 0).show();
+                Toast.makeText(this.mContext, "Error while getting image from Camera\nPlease Try again", Toast.LENGTH_SHORT).show();
             }
             Camera camera12 = this.camera;
             if (camera12 != null) {
                 try {
                     this.bitmap = PictureUtils.addWaterMark(camera12.getCameraBitmap());
-                } catch (Exception e) {
+                } catch (Throwable e) {
                     Log.e("CAMERA", "onActivityResult: " + e);
                 }
             }
             Bitmap bitmap = this.bitmap;
-            if (bitmap != null) {
+            if (bitmap != null && this.cameraActivityCallBack != null) {
                 this.cameraActivityCallBack.onCameraActivityResult(bitmap, this.bitmapPath);
             } else {
                 CommonActions.snackMsgs(this.parentView, "Error, please try again later!");
@@ -505,7 +295,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     public static Bitmap modifyOrientation(Bitmap bitmap, String image_absolute_path) throws IOException {
-        int attributeInt = new ExifInterface(image_absolute_path).getAttributeInt(androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION, 1);
+        int attributeInt = new ExifInterface(image_absolute_path).getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
         if (attributeInt == 2) {
             return flip(bitmap, true, false);
         }
@@ -535,33 +325,27 @@ public abstract class BaseFragment extends Fragment {
 
     @Override // androidx.fragment.app.Fragment
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case 101:
-                hasPermission("android.permission.CAMERA");
-                break;
-            case 102:
-                hasPermission("android.permission.WRITE_EXTERNAL_STORAGE");
-                break;
-            case 103:
-                hasPermission("android.permission.READ_EXTERNAL_STORAGE");
-                break;
-        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        // Simple logging or handling if needed
     }
 
     private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
         ArrayList<String> arrayList = new ArrayList<>();
-        Iterator<String> it = wanted.iterator();
-        while (it.hasNext()) {
-            String next = it.next();
-            if (!hasPermission(next)) {
-                arrayList.add(next);
+        for (String perm : wanted) {
+            if (!hasPermission(perm)) {
+                arrayList.add(perm);
             }
         }
         return arrayList;
     }
 
     private boolean hasPermission(String permission) {
-        return !canMakeSmores() || Build.VERSION.SDK_INT < 23 || getActivity().checkSelfPermission(permission) == 0;
+        if (canMakeSmores()) {
+            if (Build.VERSION.SDK_INT >= 23) {
+                return getActivity().checkSelfPermission(permission) == PackageManager.PERMISSION_GRANTED;
+            }
+        }
+        return true;
     }
 
     private boolean canMakeSmores() {
