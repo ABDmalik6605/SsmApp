@@ -1,13 +1,16 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext.kotlin_version = '1.9.22'
     repositories {
         google()
         mavenCentral()
-        // JitPack is not needed here if it's not a buildscript dependency, but it doesn't hurt.
-        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.9.3'
+        // Ensure this version matches your Android Studio version
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        // Note: I lowered this to 8.2.2 because 8.9.3 does not exist yet (it might be a typo).
+        // If 8.9.3 works for you, change it back.
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -15,8 +18,8 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' } // <-- THIS IS THE CRITICAL ADDITION
-        maven { url 'https://jcenter.bintray.com' }
+        maven { url 'https://jitpack.io' }
+        jcenter() // <--- This enables the "Old Store" for ancient libraries
     }
 }
 

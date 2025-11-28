@@ -11,6 +11,7 @@ import android.os.Build;
 import android.util.Log;
 import com.integratedbiometrics.ibscanultimate.IBScanException;
 import org.libusb.LibUsbManager;
+//import org.*;
 
 /* loaded from: classes2.dex */
 public class IBScan {
